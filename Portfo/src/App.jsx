@@ -1,72 +1,71 @@
-import './App.css'
+import './App.css';
 
 function App() {
-
   return (
+    <main className="login-container">
+      
+      <section className="promo-panel">
+        <h1 className="promo-title">COM DEVSEM TUDO É POSSÍVEL</h1>
+        <p className="promo-text">
+          DEVSEM cria soluções digitais modernas, transformando ideias em 
+          tecnologia eficiente e inovadora.
+        </p>
+        <button className="promo-btn">Saiba Mais</button>
+      </section>
 
-    <>
+      <section className="form-section">
+        <header className="form-header">
+          <h1 className="form-title">CRIE SUA CONTA</h1>
+        </header>
 
-    <main id='main1'>
-
-
-      <div id='conteudomain'>
-
-        <h1 id='titulo'>CRIE SUA CONTA</h1>
-
-        <div id='inputs'>
-
-          <div className='grupo'>
-            <p>Digite Seu Email: </p>
-            <input type="email" placeholder='Seu email...' />
+        <form className="login-form">
+          <div className="input-group">
+            <label htmlFor="email">Digite Seu Email:</label>
+            <input 
+              id="email"
+              type="email" 
+              placeholder="Seu email..." 
+              required 
+              autoComplete="email"
+            />
           </div>
 
-          <div className='grupo'>
-            <p>Crie Uma Senha: </p>
-            <input type="password" placeholder='Sua senha...' />
+          <div className="input-group">
+            <label htmlFor="password">Crie Uma Senha:</label>
+            <input 
+              id="password"
+              type="password" 
+              placeholder="Sua senha..." 
+              required 
+              autoComplete="new-password"
+            />
           </div>
 
-          <button id='btnCriar'>CRIAR CONTA</button>
+          <button type="submit" className="primary-btn large">CRIAR CONTA</button>
+        </form>
 
-          <div id="divisor">
-            <span></span>
-            <p>ou continue com</p>
-            <span></span>
-          </div>
-
-          <div id="social">
-            <button className="btnSocial google">Google</button>
-            <button className="btnSocial facebook">Facebook</button>
-          </div>
-
-          <p id="loginLink">
-            Já possui uma conta? <span>Entrar</span>
-          </p>
-
+        <div className="divider">
+          <span></span>
+          <p>ou continue com</p>
+          <span></span>
         </div>
 
-      </div>
+        <div className="social-grid">
+          <button className="social-btn google" type="button">
+            Google
+          </button>
+          <button className="social-btn facebook" type="button">
+            Facebook
+          </button>
+        </div>
 
-      <div id='janela'>
-        <h1 id='titulojanela'>
-            COM DEVSEM TUDO É POSSÍVEL
-        </h1>
-
-        <br />
-
-        <p id='pjanela'>
-          DEVSEM cria soluções digitais modernas, transformando ideias em tecnologia eficiente e inovadora.
+        <p className="login-link">
+          Já possui uma conta? <span className="login-link-highlight">Entrar</span>
         </p>
-
-        
-        
-      </div>
-
+      </section>
     </main>
-
-
-    
-    </>
-  )
+  );
 }
 
-export default App
+export default App;
+
